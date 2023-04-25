@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>C#-Nachschlagewerk - C# - Nachschlagewerk</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "C#-Nachschlagewerk";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> C# - Nachschlagewerk</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="tocbase current">
+    
+    
+      
+
+
+  
+    
+    <li class="navtree toctree-l1 page current">
+      <a class="current" href=".">
+        C#-Nachschlagewerk
+      </a>
+    </li>
+    
+      
+
+
+
+      
+
+  <li class="toctree-l1">
+    <a href="#theorie">
+      Theorie
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l1">
+    <ul class="subnav-l1 toc-hidden">
+    
+      
+          
+
+  <li class="toctree-l2 current with-children">
+    <a href="#arrays-in-c">
+      Arrays in C
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l2 current">
+    <ul class="subnav-l2 current">
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#allgemein">Allgemein</a>
+        </li>
+    
+      
+          
+
+  <li class="toctree-l3">
+    <a href="#erstellen-eines-arrays">
+      Erstellen eines Arrays
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l3">
+    <ul class="subnav-l3 toc-hidden">
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#aufgabe-erstellen-eines-string-arrays">Aufgabe: Erstellen eines String-Arrays</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+    
+      
+          
+
+  <li class="toctree-l3">
+    <a href="#fullen-eines-arrays">
+      Füllen eines Arrays
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l3">
+    <ul class="subnav-l3 toc-hidden">
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#aufgabe-fullen-eines-string-arrays">Aufgabe: Füllen eines String-Arrays</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+    
+      
+          
+
+  <li class="toctree-l3">
+    <a href="#zugreifen-auf-elemente-eines-arrays">
+      Zugreifen auf Elemente eines Arrays
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l3">
+    <ul class="subnav-l3 toc-hidden">
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#aufgabe-zugreifen-auf-ein-element-eines-string-arrays">Aufgabe: Zugreifen auf ein Element eines String-Arrays</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+    
+      
+          
+
+  <li class="toctree-l3">
+    <a href="#die-length-eigenschaft">
+      Die .Length-Eigenschaft
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l3">
+    <ul class="subnav-l3 toc-hidden">
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#frage-was-ist-der-hochste-index-eines-arrays-mit-der-lange-10">Frage: Was ist der höchste Index eines Arrays mit der Länge 10?</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+    
+      
+          
+
+  <li class="toctree-l3">
+    <a href="#iterieren-uber-ein-array">
+      Iterieren über ein Array
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l3">
+    <ul class="subnav-l3 toc-hidden">
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#aufgabe-iterieren-uber-ein-string-array">Aufgabe: Iterieren über ein String-Array</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+    
+      
+          
+
+  <li class="toctree-l3">
+    <a href="#negativer-index">
+      Negativer Index
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l3">
+    <ul class="subnav-l3 toc-hidden">
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#frage-was-passiert-wenn-du-auf-einen-negativen-index-zugreifst-zb-array-1">Frage: Was passiert, wenn du auf einen negativen Index zugreifst, z.B. array[-1]?</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+    
+    </ul>
+  </li>
+
+      
+    
+    </ul>
+  </li>
+
+      
+
+  <li class="toctree-l1">
+    <a href="#aufgaben">
+      Aufgaben
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l1">
+    <ul class="subnav-l1 toc-hidden">
+    
+      
+        <li class="toctree-l2">
+          <a class="toctree-l3" href="#array-basics">Array-Basics</a>
+        </li>
+    
+    </ul>
+  </li>
+
+
+  
+    
+  </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">C# - Nachschlagewerk</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>C#-Nachschlagewerk</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="c-nachschlagewerk">C#-Nachschlagewerk</h1>
+<h1 id="theorie">Theorie</h1>
+<h2 id="arrays-in-c">Arrays in C</h2>
+<p>Arrays sind Sammlungen von Elementen eines bestimmten Typs, die über einen Index abgerufen werden können.</p>
+<p><a href="#Array-Basics">Übungsaufgabe</a></p>
+<h3 id="allgemein">Allgemein</h3>
+<p><strong>Arrays</strong> sind grundlegende Datenstrukturen in C# und dienen zur Speicherung von Sammlungen von Elementen. Hier sind einige ausführliche Stichpunkte, die das Konzept von Arrays in C# und ihre Funktionsweise erklären:</p>
+<ol>
+<li>
+<p><strong>Definition</strong>: Ein Array in C# ist eine Sammlung von Elementen, die denselben <strong>Datentyp</strong> haben und über einen <strong>Index</strong> zugänglich sind.</p>
+</li>
+<li>
+<p><strong>Deklaration</strong>: In C# wird ein Array mit der Syntax <code>Datentyp[] ArrayName</code> deklariert, z.B. <code>int[] myArray;</code>.</p>
+</li>
+<li>
+<p><strong>Initialisierung</strong>: Arrays in C# können bei der Erstellung initialisiert werden, indem man ihnen eine Liste von Werten zuweist oder die Größe angibt. Beispiele: <code>int[] myArray = new int[5];</code> oder <code>int[] myArray = {1, 2, 3, 4, 5};</code>.</p>
+</li>
+<li>
+<p><strong>Index</strong>: Jedes Element im Array hat einen eindeutigen Index, der seine Position innerhalb des Arrays angibt. Indices sind typischerweise ganze Zahlen, die bei 0 beginnen.</p>
+</li>
+<li>
+<p><strong>Speicherung</strong>: Arrays in C# speichern ihre Elemente in aufeinanderfolgenden <strong>Speicheradressen</strong>, was sie effizient für den Zugriff auf Elemente anhand ihres Indexes macht. Also um bei einem int-Array der Länge 5 <code>int[] test = new int[4]</code> auf  den Index <code>3</code> zuzugreifen wird die Speicheradresse des ersten Elements <code>0</code> plus den Index mal der Länge des Datentyps (bei int <code>4 bytes</code>) gerechnet. Nehmen wir an Index 0 liegt an der "Speicheradresse" <code>8</code> dann liegt Index 3 bei <code>8+(3*4)</code> also <code>20</code>.</p>
+</li>
+<li>
+<p><strong>Feste Größe</strong>: Die Größe eines Arrays in C# ist festgelegt und kann nach der Erstellung nicht geändert werden. Um die Größe eines Arrays zu ändern, muss man normalerweise ein neues Array erstellen und die Elemente kopieren.</p>
+</li>
+<li>
+<p><strong>Zugriff</strong>: Elemente eines Arrays in C# können über ihren Index abgerufen oder geändert werden.</p>
+</li>
+<li>
+<p><strong>Schleifen</strong>: Arrays in C# können mit Schleifen durchlaufen werden, um auf ihre Elemente zuzugreifen oder sie zu bearbeiten. Häufig verwendete Schleifen sind <code>for</code>, <code>foreach</code> und <code>while</code>-Schleifen.</p>
+</li>
+<li>
+<p><strong>Mehrdimensionale Arrays</strong>: Arrays in C# können mehrere Dimensionen haben, wie z.B. 2D- oder 3D-Arrays. Mehrdimensionale Arrays sind im Grunde genommen Arrays von Arrays. Beispiele: <code>int[,] my2DArray = new int[3, 4];</code> oder <code>int[,,] my3DArray = new int[3, 4, 5];</code>.</p>
+</li>
+<li>
+<p><strong>Jagged Arrays</strong>: C# unterstützt auch unregelmäßige Arrays (jagged arrays), die Arrays von Arrays sind, wobei jedes innere Array eine unterschiedliche Länge haben kann. Beispiel: <code>int[][] myJaggedArray = new int[3][];</code>.</p>
+</li>
+<li>
+<p><strong>Anwendungsbereiche</strong>: Arrays in C# sind in vielen Bereichen der Programmierung und Informatik nützlich, z.B. bei der Speicherung von Daten, der Durchführung von Berechnungen und der Implementierung von Algorithmen.</p>
+</li>
+<li>
+<p><strong>Alternative Datenstrukturen</strong>: Arrays sind in C# nicht immer die beste Wahl für bestimmte Aufgaben. Andere Datenstrukturen wie <code>List&lt;T&gt;</code>, <code>HashSet&lt;T&gt;</code> oder <code>Dictionary&lt;TKey, TValue&gt;</code> können in bestimmten Situationen besser geeignet sein.</p>
+</li>
+</ol>
+<h3 id="erstellen-eines-arrays">Erstellen eines Arrays</h3>
+<p>Ein Array wird erstellt, indem man den Typ der Elemente, gefolgt von eckigen Klammern <code>[]</code> und dann den Array-Namen angibt. Du musst auch die Größe des Arrays bei der Erstellung festlegen.</p>
+<p>Beispiel:</p>
+<pre><code class="language-csharp">int[] zahlen = new int[5];
+</code></pre>
+<h4 id="aufgabe-erstellen-eines-string-arrays">Aufgabe: Erstellen eines String-Arrays</h4>
+<p>Erstelle ein String-Array mit dem Namen <code>namen</code> und einer Größe von 3.</p>
+<details>
+<summary>Lösung</summary>
+
+
+<pre><code class="language-csharp">string[] namen = new string[3];
+</code></pre>
+
+
+</details>
+
+<h3 id="fullen-eines-arrays">Füllen eines Arrays</h3>
+<p>Du kannst einem Array Werte zuweisen, indem du den Index verwendest.</p>
+<p>Beispiel:</p>
+<pre><code class="language-csharp">zahlen[0] = 1;
+zahlen[1] = 2;
+zahlen[2] = 3;
+zahlen[3] = 4;
+zahlen[4] = 5;
+</code></pre>
+<h4 id="aufgabe-fullen-eines-string-arrays">Aufgabe: Füllen eines String-Arrays</h4>
+<p>Fülle das <code>namen</code>-Array mit den Werten "Max", "Mia" und "Tom".</p>
+<details>
+<summary>Lösung</summary>
+
+
+<pre><code class="language-csharp">namen[0] = &quot;Max&quot;;
+namen[1] = &quot;Mia&quot;;
+namen[2] = &quot;Tom&quot;;
+</code></pre>
+
+
+</details>
+
+<h3 id="zugreifen-auf-elemente-eines-arrays">Zugreifen auf Elemente eines Arrays</h3>
+<p>Um auf die Werte eines Arrays zuzugreifen, verwende den Index.</p>
+<p>Beispiel:</p>
+<pre><code class="language-csharp">int zweiteZahl = zahlen[1];
+</code></pre>
+<h4 id="aufgabe-zugreifen-auf-ein-element-eines-string-arrays">Aufgabe: Zugreifen auf ein Element eines String-Arrays</h4>
+<p>Greife auf das zweite Element des <code>namen</code>-Arrays zu und speichere es in einer Variablen namens <code>zweiterName</code>.</p>
+<details>
+<summary>Lösung</summary>
+
+
+<pre><code class="language-csharp">string zweiterName = namen[1];
+</code></pre>
+
+
+</details>
+
+<h3 id="die-length-eigenschaft">Die <code>.Length</code>-Eigenschaft</h3>
+<p>Die <code>.Length</code>-Eigenschaft gibt die Anzahl der Elemente in einem Array zurück. Beachte, dass der höchste Index immer um eins kleiner ist als die <code>.Length</code>, da die Indizierung bei 0 beginnt.</p>
+<p>Beispiel:</p>
+<pre><code class="language-csharp">int[] zahlen = new int[6];
+int arrayLength = zahlen.Length; // arrayLength ist 6
+int hoechsterIndex = arrayLength - 1; // hoechsterIndex ist 5
+</code></pre>
+<h4 id="frage-was-ist-der-hochste-index-eines-arrays-mit-der-lange-10">Frage: Was ist der höchste Index eines Arrays mit der Länge 10?</h4>
+<details>
+<summary>Antwort</summary>
+
+Der höchste Index eines Arrays mit der Länge 10 ist 9, da die Indizierung bei 0 beginnt.
+
+</details>
+
+<h3 id="iterieren-uber-ein-array">Iterieren über ein Array</h3>
+<p>Um über die Elemente eines Arrays zu iterieren, verwende eine <code>for</code>-Schleife oder eine <code>foreach</code>-Schleife.</p>
+<p>Beispiel:</p>
+<pre><code class="language-csharp">for (int i = 0; i &lt; zahlen.Length; i++) {
+  Console.WriteLine(zahlen[i]);
+}
+
+foreach (int zahl in zahlen) {
+  Console.WriteLine(zahl);
+}
+</code></pre>
+<h4 id="aufgabe-iterieren-uber-ein-string-array">Aufgabe: Iterieren über ein String-Array</h4>
+<p>Iteriere über das <code>namen</code>-Array und gib jeden Namen aus.</p>
+<details>
+<summary>Lösung</summary>
+
+
+<pre><code class="language-csharp">for (int i = 0; i &lt; namen.Length; i++) {
+  Console.WriteLine(namen[i]);
+}
+
+foreach (string name in namen) {
+  Console.WriteLine(name);
+}
+</code></pre>
+
+
+</details>
+
+<h3 id="negativer-index">Negativer Index</h3>
+<p>In C# ist es nicht erlaubt, auf einen negativen Index zuzugreifen. Wenn du dies versuchst, wird eine <code>IndexOutOfRangeException</code> ausgelöst.</p>
+<h4 id="frage-was-passiert-wenn-du-auf-einen-negativen-index-zugreifst-zb-array-1">Frage: Was passiert, wenn du auf einen negativen Index zugreifst, z.B. <code>array[-1]</code>?</h4>
+<details>
+<summary>Antwort</summary>
+
+Wenn du auf einen negativen Index zugreifst, wird eine `IndexOutOfRangeException` ausgelöst, da negative Indizes in C# nicht erlaubt sind.
+
+</details>
+
+<h1 id="aufgaben">Aufgaben</h1>
+<h2 id="array-basics">Array-Basics</h2>
+<p><strong>Pfad im Google Drive: <code>C#/Aufgaben/Array/Basics</code></strong>
+<strong>Direktlink zum Drive Ordner:</strong> <a href="https://drive.google.com/drive/folders/16DGIMG3r0Jz6_PBtJpYvcHCVQmT29TyS?usp=share_link">Link</a></p>
+<details>
+<summary>Aufgabe</summary>
+
+
+<pre><code class="language-csharp">using System;
+
+class ArrayBasics
+{
+    static void Main()
+    {
+        // Aufgabe 1: Deklariere ein leeres eindimensionales Array mit einer Größe von 3.
+        // Hinweis: Verwende die Schreibweise &quot;int[]&quot; und &quot;new int[3]&quot;.
+
+        // Aufgabe 2: Fülle das Array aus Aufgabe 1 mit den Zahlen 1, 2 und 3.
+        // Hinweis: Setze die Werte an den entsprechenden Positionen des Arrays.
+
+        // Aufgabe 3: Deklariere und initialisiere ein neues eindimensionales Array mit den Zahlen 4, 5 und 6.
+        // Hinweis: Verwende die Schreibweise &quot;new int[] {...}&quot;.
+
+        // Aufgabe 4: Gib das zweite Element des ersten Arrays aus.
+        // Hinweis: Denke daran, dass Arrays bei 0 anfangen zu zählen.
+
+        // Aufgabe 5: Ändere das dritte Element des zweiten Arrays auf 7.
+        // Hinweis: Setze den Wert an der entsprechenden Position des Arrays.
+
+        // Aufgabe 6: Gib alle Elemente des ersten Arrays in umgekehrter Reihenfolge aus.
+        // Hinweis: Verwende eine for-Schleife und starte am Ende des Arrays.
+
+        // Aufgabe 7: Schreibe eine Methode, die die Summe der Elemente eines eindimensionalen Arrays berechnet und zurückgibt.
+        // Hinweis: Verwende eine for-Schleife und eine Variable zum Speichern der Summe.
+    }
+
+    // Implementiere die Methode für Aufgabe 7 hier.
+}
+
+</code></pre>
+
+
+</details>
+
+<details>
+<summary>Lösung</summary>
+
+
+<pre><code class="language-csharp">using System;
+
+class ArrayBasics
+{
+    static void Main()
+    {
+        // Aufgabe 1: Deklariere ein leeres eindimensionales Array mit einer Größe von 3.
+        int[] array1 = new int[3];
+        Console.Write(&quot;Aufgabe 1: Leeres Array: &quot;);
+        PrintArray(array1);
+        Console.WriteLine();
+
+        // Aufgabe 2: Fülle das Array mit den Zahlen 1, 2 und 3.
+        array1[0] = 1;
+        array1[1] = 2;
+        array1[2] = 3;
+        Console.Write(&quot;Aufgabe 2: Array mit Zahlen 1, 2 und 3: &quot;);
+        PrintArray(array1);
+        Console.WriteLine();
+
+        // Aufgabe 3: Deklariere und initialisiere ein eindimensionales Array mit den Zahlen 4, 5 und 6.
+        int[] array2 = new int[] { 4, 5, 6 };
+        Console.Write(&quot;Aufgabe 3: Array mit Zahlen 4, 5 und 6: &quot;);
+        PrintArray(array2);
+        Console.WriteLine();
+
+        // Aufgabe 4: Gib das zweite Element des ersten Arrays aus.
+        Console.WriteLine(&quot;Aufgabe 4: Zweites Element des ersten Arrays: &quot; + array1[1]);
+
+        // Aufgabe 5: Ändere das dritte Element des zweiten Arrays auf 7.
+        array2[2] = 7;
+        Console.Write(&quot;Aufgabe 5: Zweites Array nach Änderung des dritten Elements: &quot;);
+        PrintArray(array2);
+        Console.WriteLine();
+
+        // Aufgabe 6: Gib alle Elemente des ersten Arrays in umgekehrter Reihenfolge aus.
+        Console.Write(&quot;Aufgabe 6: Elemente des ersten Arrays in umgekehrter Reihenfolge: &quot;);
+        for (int i = array1.Length - 1; i &gt;= 0; i--)
+        {
+            Console.Write(array1[i] + &quot; &quot;);
+        }
+        Console.WriteLine();
+
+        // Aufgabe 7: Berechne die Summe der Elemente des zweiten Arrays.
+        int sum = CalculateSum(array2);
+        Console.WriteLine(&quot;Aufgabe 7: Summe der Elemente des zweiten Arrays: &quot; + sum);
+    }
+
+    // Hilfsmethode zum Ausgeben eines Arrays.
+    static void PrintArray(int[] array)
+    {
+        for (int i = 0; i &lt; array.Length; i++)
+        {
+            Console.Write(array[i] + &quot; &quot;);
+        }
+    }
+
+    // Methode zur Berechnung der Summe eines Arrays.
+    static int CalculateSum(int[] array)
+    {
+        int sum = 0;
+        for (int i = 0; i &lt; array.Length; i++)
+        {
+            sum += array[i];
+        }
+        return sum;
+    }
+}
+
+
+</code></pre>
+
+
+</details>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.4.2
+Build Date UTC : 2023-04-25 16:58:44.195247+00:00
+-->
