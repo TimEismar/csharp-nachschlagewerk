@@ -1,0 +1,4 @@
+site_name: C# - Nachschlagewerk
+
+theme:
+  name: 'rtd-dropdown'
